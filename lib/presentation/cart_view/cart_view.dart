@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:task/constants/common_widgets.dart';
 import 'package:task/constants/sizes.dart';
 import 'package:task/controllers/cart_controller.dart';
-import 'package:task/controllers/grocery_controller.dart';
-import 'package:task/models/user.dart';
-
 import '../../constants/colors.dart';
 
 class CartView extends StatelessWidget {
@@ -22,7 +17,6 @@ class CartView extends StatelessWidget {
         body: GetBuilder(
           init: CartController(),
           builder: (controller) {
-            print(controller.getCartProducts.length);
             return controller.getCartProducts.isEmpty
                 ? const Center(
                     child: Text("add some products to cart"),

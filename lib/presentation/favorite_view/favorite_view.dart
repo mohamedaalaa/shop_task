@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:task/constants/colors.dart';
 import 'package:task/constants/common_widgets.dart';
 import 'package:task/controllers/cart_controller.dart';
 import 'package:task/controllers/grocery_controller.dart';
-import 'package:task/models/user.dart';
 
 class FavoriteView extends StatelessWidget {
   FavoriteView({super.key});
@@ -42,7 +39,6 @@ class FavoriteView extends StatelessWidget {
                               onPressed: () {
                                 cartController.addProduct(
                                     controller.getFavProduts[index]);
-                                print(controller.cartProduct.length);
                               },
                               icon: const Icon(
                                 Icons.add,

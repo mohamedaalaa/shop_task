@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:task/constants/colors.dart';
 
 PreferredSizeWidget appBarC() {
   return AppBar(

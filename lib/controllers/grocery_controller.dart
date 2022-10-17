@@ -1,12 +1,6 @@
-import 'dart:convert';
-
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:task/constants/colors.dart';
-import 'package:task/constants/images.dart';
 import 'package:task/models/category.dart';
 import 'package:task/models/product.dart';
-import 'package:task/models/user.dart';
 import 'package:task/services/grocery_services.dart';
 
 class ViewController extends GetxController {

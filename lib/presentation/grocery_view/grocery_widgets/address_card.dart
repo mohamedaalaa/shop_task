@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:task/constants/colors.dart';
-import 'package:task/constants/device_size.dart';
 import 'package:task/constants/sizes.dart';
-import 'package:task/models/user.dart';
 
 import '../../../constants/common_widgets.dart';
 

@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:task/constants/colors.dart';
 import 'package:task/constants/common_widgets.dart';
-
 import 'package:task/constants/routes.dart';
 import 'package:task/constants/sizes.dart';
 import 'package:task/controllers/grocery_controller.dart';
-import 'package:task/models/category.dart';
 import 'package:task/models/user.dart';
 import 'package:task/presentation/grocery_view/grocery_widgets/address_card.dart';
 import 'package:task/presentation/grocery_view/grocery_widgets/deals_of_the_day.dart';
@@ -97,38 +93,6 @@ class _GoceryViewState extends State<GoceryView> {
                 ],
               ),
               gapH20,
-              // GetBuilder(
-              //   init: ViewController(),
-              //   builder: (controller) {
-              //     return groceryController.isLoading.value
-              //         ? const Center(child: CircularProgressIndicator())
-              //         : SizedBox(
-              //             height: 90,
-              //             width: double.infinity,
-              //             child: ListView.separated(
-              //                 scrollDirection: Axis.horizontal,
-              //                 itemBuilder: (context, index) {
-              //                   return Flexible(
-              //                       child: Column(
-              //                     children: [
-              //                       Container(
-              //                         height: 56,
-              //                         width: 56,
-              //                         decoration: getDecoration(colors[0], 10),
-              //                       ),
-              //                       gapH10,
-              //                       Text(groceryController
-              //                           .categories[index].name)
-              //                     ],
-              //                   ));
-              //                 },
-              //                 separatorBuilder: (context, index) {
-              //                   return gapH10;
-              //                 },
-              //                 itemCount: groceryController.allProducts.length),
-              //           );
-              //   },
-              // ),
               Obx(
                 () => groceryController.isLoading.value
                     ? const CircularProgressIndicator()

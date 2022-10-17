@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:task/constants/colors.dart';
 import 'package:task/constants/common_widgets.dart';
 import 'package:task/constants/sizes.dart';
 import 'package:task/controllers/grocery_controller.dart';
-import 'package:task/models/product.dart';
-import 'package:task/models/user.dart';
 
 class AllProductsView extends StatelessWidget {
-  AllProductsView({super.key});
+  const AllProductsView({super.key});
 
   @override
   Widget build(BuildContext context) {

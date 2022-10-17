@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:task/models/product.dart';
 import 'package:task/presentation/all_products_view.dart';
 
 const String allProductsR = 'apr';
@@ -7,8 +6,7 @@ const String allProductsR = 'apr';
 Route<dynamic> generateRout(RouteSettings settings) {
   switch (settings.name) {
     case allProductsR:
-      var products = settings.arguments as List<Product>;
-      return MaterialPageRoute(builder: (_) => AllProductsView());
+      return MaterialPageRoute(builder: (_) => const AllProductsView());
     default:
       return MaterialPageRoute(builder: (_) => const ErrorWidget());
   }
