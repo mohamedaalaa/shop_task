@@ -1,16 +1,45 @@
 import 'package:flutter/material.dart';
+import 'package:task/models/user.dart';
 
 PreferredSizeWidget appBarC() {
   return AppBar(
+    titleSpacing: 0,
     elevation: 0,
     backgroundColor: Colors.white,
-    leading: Builder(
-      builder: (BuildContext context) {
-        return CustomPaint(
-          size: Size(122, (122 * 0.3333333333333333).toDouble()),
-          painter: RPSCustomPainter(),
-        );
-      },
+    title: Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: CustomPaint(
+        size: Size(122, (122 * 0.3333333333333333).toDouble()),
+        painter: RPSCustomPainter(),
+        child: Container(
+          width: 122,
+          height: 122 * 0.3333333333333333,
+          child: Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(
+                  Icons.location_on,
+                  color: Colors.white,
+                ),
+                Text(
+                  cUser.name,
+                  style: textStyle(10, FontWeight.normal, Colors.white),
+                )
+              ],
+            ),
+          ),
+        ),
+        // child: SizedBox(
+        //     height: 100,
+        //     width: 100,
+        //     child: Center(
+        //       child: Text(
+        //         cUser.name,
+        //         style: textStyle(10, FontWeight.normal, Colors.white),
+        //       ),
+        //     )),
+      ),
     ),
     actions: [
       Container(
@@ -25,12 +54,6 @@ PreferredSizeWidget appBarC() {
     ],
   );
 }
-
-/*
-child: CustomPaint(
-  size: Size(WIDTH,(WIDTH*0.3333333333333333).toDouble()), //You can Replace [WIDTH] with your desired width for Custom Paint and height will be calculated automatically
-  painter: RPSCustomPainter(),
-)*/
 
 class RPSCustomPainter extends CustomPainter {
   @override

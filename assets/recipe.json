@@ -16,6 +16,7 @@
                 "name":"Salamon",
                 "quantity":1,
                 "price":"30",
+                "type":"Fish",
                 "discount":"50%"
             }
         ]
@@ -27,6 +28,7 @@
                 "id":1,
                 "name":"Carrot",
                 "quantity":1,
+                "type":"Vegetables",
                 "price":"15"
             }
         ]
@@ -39,6 +41,7 @@
                 "name":"Cocacola",
                 "quantity":1,
                 "price":"10",
+                "type":"Vegetables",
                 "discount":"30%"
             }
         ]
@@ -50,6 +53,7 @@
                 "id":3,
                 "name":"Meat",
                 "quantity":1,
+                "type":"Vegetables",
                 "price":"30"
             }
         ]
@@ -62,6 +66,7 @@
                 "id":4,
                 "name":"Orange Juice",
                 "quantity":1,
+                "type":"Vegetables",
                 "price":"30"
             }
         ]

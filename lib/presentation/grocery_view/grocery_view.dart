@@ -103,11 +103,23 @@ class _GoceryViewState extends State<GoceryView> {
                             (index) => Flexible(
                                   child: Column(
                                     children: [
-                                      Container(
-                                        height: 56,
-                                        width: 56,
-                                        decoration:
-                                            getDecoration(colors[index], 10),
+                                      GestureDetector(
+                                        onTap: () => Navigator.of(context)
+                                            .pushNamed(allProductsR,
+                                                arguments: groceryController
+                                                    .allProducts
+                                                    .where((element) =>
+                                                        element.type ==
+                                                        groceryController
+                                                            .categories[index]
+                                                            .name)
+                                                    .toList()),
+                                        child: Container(
+                                          height: 56,
+                                          width: 56,
+                                          decoration:
+                                              getDecoration(colors[index], 10),
+                                        ),
                                       ),
                                       gapH10,
                                       Text(groceryController

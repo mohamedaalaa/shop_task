@@ -7,6 +7,7 @@ class Product {
   int quantity;
   final String price;
   final String? discount;
+  final String type;
   bool isFav = false;
 
   Product({
@@ -14,6 +15,7 @@ class Product {
     required this.name,
     required this.quantity,
     required this.price,
+    required this.type,
     this.isFav = false,
     this.discount,
   });
@@ -46,6 +48,7 @@ class Product {
       quantity: map['quantity'] as int,
       price: map['price'] as String,
       discount: map['discount'] != null ? map['discount'] as String : null,
+      type: map['type'] as String,
     );
   }
 

@@ -5,11 +5,15 @@ class CartController extends GetxController {
   List<Product> cart = [];
   int totalPrice = 0;
 
-  int calculateTotalPrice() {
-    return cart.isEmpty
-        ? 0
-        : int.parse(cart.fold(
-            "0", (previousValue, element) => previousValue + element.price));
+  void calculateTotalPrice() {
+    if (cart.isEmpty) {
+      totalPrice = 0;
+    } else {
+      for (var product in cart) {
+        totalPrice += int.parse(product.price);
+      }
+    }
+    update();
   }
 
   List<Product> get getCartProducts {

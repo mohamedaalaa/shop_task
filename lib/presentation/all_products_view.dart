@@ -4,9 +4,11 @@ import 'package:task/constants/colors.dart';
 import 'package:task/constants/common_widgets.dart';
 import 'package:task/constants/sizes.dart';
 import 'package:task/controllers/grocery_controller.dart';
+import 'package:task/models/product.dart';
 
 class AllProductsView extends StatelessWidget {
-  const AllProductsView({super.key});
+  final List<Product> products;
+  const AllProductsView({super.key, required this.products});
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +26,8 @@ class AllProductsView extends StatelessWidget {
                     width: 60,
                     decoration: getDecoration(colors[index], 5),
                   ),
-                  title: Text(controller.allProducts[index].name),
-                  subtitle:
-                      Text("Pieces ${controller.allProducts[index].name}"),
+                  title: Text(products[index].name),
+                  subtitle: Text("Pieces ${products[index].name}"),
                   trailing: SizedBox(
                     child: IconButton(
                         onPressed: () => controller
@@ -39,7 +40,7 @@ class AllProductsView extends StatelessWidget {
                         )),
                   ));
             },
-            itemCount: controller.allProducts.length,
+            itemCount: products.length,
             separatorBuilder: (BuildContext context, int index) {
               return gapH10;
             },

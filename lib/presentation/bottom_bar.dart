@@ -80,15 +80,20 @@ class _BottomBarState extends State<BottomBar> {
                 basket,
                 color: Colors.white,
               ),
-              Positioned(
-                  left: 5,
-                  right: 5,
-                  top: 5,
-                  bottom: 5,
-                  child: Text(
-                    "${controller.calculateTotalPrice()}",
-                    style: textStyle(10, FontWeight.bold, Colors.white),
-                  ))
+              GetBuilder(
+                init: CartController(),
+                builder: (controller) {
+                  return Positioned(
+                      left: 5,
+                      right: 5,
+                      top: 5,
+                      bottom: 5,
+                      child: Text(
+                        "${controller.totalPrice}",
+                        style: textStyle(10, FontWeight.bold, Colors.white),
+                      ));
+                },
+              )
             ],
           )),
         ));
