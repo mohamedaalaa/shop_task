@@ -1,0 +1,72 @@
+{
+    "user":
+        {
+            "name":"mohamed alaa",
+            "home address":"Cairo,Giza",
+            "home street":"Street x12",
+            "office address":"Axis Istanbul",
+            "office street":"Floor 2, office 11"
+        },
+  "categories":[
+    {
+        "type":"Fish",
+        "products":[
+            {
+                "id":0,
+                "name":"Salamon",
+                "quantity":1,
+                "price":"30",
+                "discount":"50%"
+            }
+        ]
+    },
+    {
+        "type":"Vegetables",
+        "products":[
+            {
+                "id":1,
+                "name":"Carrot",
+                "quantity":1,
+                "price":"15"
+            }
+        ]
+    },
+    {
+        "type":"Beverages",
+        "products":[
+            {
+                "id":2,
+                "name":"Cocacola",
+                "quantity":1,
+                "price":"10",
+                "discount":"30%"
+            }
+        ]
+    },
+    {
+        "type":"Stick",
+        "products":[
+            {
+                "id":3,
+                "name":"Meat",
+                "quantity":1,
+                "price":"30"
+            }
+        ]
+    },
+
+    {
+        "type":"Juice",
+        "products":[
+            {
+                "id":4,
+                "name":"Orange Juice",
+                "quantity":1,
+                "price":"30"
+            }
+        ]
+    }
+        
+]
+  } 
+
